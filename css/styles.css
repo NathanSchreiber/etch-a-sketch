@@ -1,0 +1,30 @@
+:root {
+    --grid-columns: 1;
+    --grid-rows: 1;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.grid-item {
+ border: 2px solid skyblue;
+ padding: 1rem;
+}
+
+.hover-styles {
+    background-color: pink;
+}
+
+.reset-div {
+    display: flex;
+    justify-items: center;
+}
+
+.reset {
+    font-size: 25px;
+    background-color: white;
+    margin: 1rem auto;
+}
