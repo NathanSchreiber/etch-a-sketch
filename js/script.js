@@ -1,6 +1,7 @@
 // Grabs html elements to use in JS
 const container = document.querySelector('#container');
-const resetButton = document.querySelector('.reset');
+const resetDrawingButton = document.querySelector('.reset-drawing');
+const resetGridButton = document.querySelector('.reset-grid');
 const sizeButton = document.querySelector('.grid-size-button');
 
 // Function that makes rows and columns based on input number
@@ -31,9 +32,15 @@ sizeButton.addEventListener('click', () => {
         });
     };
     // Resets grid to original colors
-    resetButton.addEventListener('click', () => {
+    resetDrawingButton.addEventListener('click', () => {
         for (let i = 0; i < gridItem.length; i++) {
             gridItem[i].classList.remove('hover-styles');
+        };
+    });
+    // Resets grid completely
+    resetGridButton.addEventListener('click', () => {
+        for (let i = 0; i < gridItem.length; i++) {
+            gridItem[i].remove();
         };
     });
 });
