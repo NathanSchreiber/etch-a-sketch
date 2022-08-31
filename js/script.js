@@ -9,7 +9,6 @@ function makeRows(rows, cols) {
     for (i = 0; i < (rows * cols); i++) {
       let cell = document.createElement("div");
       cell.classList.add('test');
-    //   cell.textContent = (i + 1);
       container.appendChild(cell).className = "grid-item";
     };
   };
@@ -18,10 +17,6 @@ function makeRows(rows, cols) {
 
 const gridItem = document.querySelectorAll('.grid-item');
 
-// gridItem.addEventListener('mouseover', () => {
-//     gridItem.classList.add('hover-styles');
-// });
-
 // Makes grid colored when hovered over with mouse
 for (let i = 0; i < gridItem.length; i++) {
     gridItem[i].addEventListener('mouseover', () => {
@@ -29,6 +24,7 @@ for (let i = 0; i < gridItem.length; i++) {
     });
 };
 
+// Resets grid to original colors
 resetButton.addEventListener('click', () => {
     for (let i = 0; i < gridItem.length; i++) {
         gridItem[i].classList.remove('hover-styles');
