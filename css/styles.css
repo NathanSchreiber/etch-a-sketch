@@ -43,7 +43,8 @@ html {
     width: 14rem;
 }
 
-.reset:hover {
+.reset-drawing:hover,
+.reset-grid:hover {
     cursor: pointer;
 }
 

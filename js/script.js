@@ -18,7 +18,12 @@ function makeRows(rows, cols) {
 function gridSize() {
     let w = prompt("Enter Width", 16);
     let h = w;
-    makeRows(h, w);
+    if (w > 30) {
+        return;
+    } else {
+       makeRows(h, w);
+       sizeButton.style.pointerEvents = "none";
+    }
 };
 
 // Gets dimensions after size button is clicked, then enables drawing.
@@ -31,6 +36,7 @@ sizeButton.addEventListener('click', () => {
             gridItem[i].classList.add('hover-styles');
         });
     };
+    
     // Resets grid to original colors
     resetDrawingButton.addEventListener('click', () => {
         for (let i = 0; i < gridItem.length; i++) {
@@ -42,5 +48,6 @@ sizeButton.addEventListener('click', () => {
         for (let i = 0; i < gridItem.length; i++) {
             gridItem[i].remove();
         };
+        sizeButton.style.pointerEvents = "auto";
     });
 });
