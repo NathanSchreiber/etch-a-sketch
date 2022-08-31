@@ -1,6 +1,12 @@
 :root {
     --grid-columns: 1;
     --grid-rows: 1;
+    --page-background: rgb(53, 53, 53);
+}
+
+html {
+    background-color: var(--page-background);
+    color: white;
 }
 
 #container {
@@ -25,6 +31,31 @@
 
 .reset {
     font-size: 25px;
-    background-color: white;
+    color: var(--page-background);
+    border: 2px solid white;
+    background-color: skyblue;
     margin: 1rem auto;
+    padding: .5rem 2rem;
+}
+
+.reset:hover {
+    cursor: pointer;
+}
+
+.grid-size-div {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-size-button {
+    font-size: 25px;
+    color: var(--page-background);
+    border: 2px solid white;
+    background-color: skyblue;
+    margin: 1rem auto;
+    padding: .5rem 2rem;
+}
+
+.grid-size-button:hover {
+    cursor: pointer;
 }
